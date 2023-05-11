@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Sono:wght@300&display=swap");
+:root {
+  --blue: #3498db;
+  --dark-blue: #2980b9;
+  --red: #e74c3c;
+  --dark-red: #c0392b;
+  --black: #333;
+  --white: #fff;
+  --light-bg: #eee;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+.form-container {
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid black;
+}
+.form-container form {
+  border: 2px solid black;
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 500px;
+  border-radius: 5px;
+}
+.form-container form .box {
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 14px;
+  font-size: 18px;
+  color: var(--black);
+  margin: 10px 0;
+  background-color: var(--light-bg);
+}
+.form-container form h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.form-container form .btn,
+.form-container form .delete-btn {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: var(--white);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.form-container form .btn {
+  background-color: var(--blue);
+}
+.form-container form .btn:hover {
+  background-color: var(--dark-blue);
+}
+.form-container form .delete-btn {
+  background-color: var(--red);
+}
+.form-container form .delete-btn:hover {
+  background-color: var(--dark-red);
+}
+.form-container form p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: var(--black);
+}
+.form-container form p a {
+  color: var(--red);
+}
+.form-container form p a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */
