@@ -8,6 +8,12 @@
         header('location:Login.php');
     };
 
+    if(isset($_GET['logout'])){
+        unset($user_id);
+        session_destroy();
+        header('location:Login.php');
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,17 +29,24 @@
 <body>
     
     <div class="container">
+        <div class="profile">
         <?php 
             $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die ('query gagal');
             if(mysqli_num_rows($select) > 0){
                 $fetch = mysqli_fetch_assoc($select);
             }
+            if($fetch["image"] == ''){
+                echo '<img src="image/Gambar_default.jpg">';
+            } else {
+                echo '<img src="Uploaded_img/'. $fetch['image'] .' ">';
+            }
         ?>
         <h3><?= $fetch['name'] ?></h3>
         <a href="Update_profile.php" class="btn">update profil</a>
-        <a href="home.php?logout=<?= $user_id ?>" class="delete-btn">logout</a>
+        <a href="Home.php?logout=<?= $user_id ?>" class="delete-btn">logout</a>
         <p>new <a href="Login.php">Login</a> or <a href="Register.php">register</a></p>
     </div>
+</div>
 
 </body>
 </html>
